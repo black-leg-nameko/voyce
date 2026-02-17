@@ -1,0 +1,16 @@
+{
+  "ios": {
+    "bundleIdentifier": "com.voyce.guide",
+    "appleTeamId": "REPLACE_WITH_TEAM_ID",
+    "appStoreConnectAppId": "REPLACE_WITH_ASC_APP_ID",
+    "privacyPolicyUrl": "https://example.com/privacy",
+    "supportUrl": "https://example.com/support",
+    "marketingUrl": "https://example.com"
+  },
+  "android": {
+    "applicationId": "com.voyce.guide",
+    "playConsolePackageName": "com.voyce.guide",
+    "privacyPolicyUrl": "https://example.com/privacy",
+    "dataSafetyFormCompleted": false
+  }
+}
