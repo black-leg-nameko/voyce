@@ -1,7 +1,5 @@
 # Voyce - 観光地向け 音声ガイド + 翻訳
 
-Expoモバイルアプリ + FastAPIバックエンドで、次のフローを実装しています。
-
 1. 音声質問を録音
 2. `faster-whisper` (無料の学習済み音声認識) で文字起こし
 3. `argostranslate` (無料の翻訳モデル) で多言語化
@@ -25,7 +23,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 初回はWhisperモデルと翻訳パッケージのダウンロードが入るため、起動と初回リクエストに時間がかかります。
 本番では `ARGOS_ALLOW_RUNTIME_INSTALL=false` を維持し、必要な翻訳パッケージは `backend/preload_argos.py` で事前導入してください。
-アプリ利用前に `POST /auth/session` で運用者PINからBearerトークンを取得してください。  
+アプリ利用前に `POST /auth/session` で運用者PINからBearerトークンを取得してください。
 本番/ステージングは単一インスタンス前提ではなく、セッション・レート制御を Redis で共有します（`REDIS_URL` 必須）。
 
 ## 2) Expoアプリ起動
@@ -77,7 +75,7 @@ FAQベース回答は `backend/data/faq_ja.json` を編集すると、現地施�
 
 ## 本番配備
 
-ローカルPoCから本番移行する場合は `DEPLOYMENT.md` を参照してください。  
+ローカルPoCから本番移行する場合は `DEPLOYMENT.md` を参照してください。
 `backend` のコンテナ化、`docker-compose.prod.yml`、環境別テンプレート (`backend/.env.dev.example`, `backend/.env.stg.example`, `backend/.env.prod.example`) を用意しています。
 
 ## テスト
@@ -111,5 +109,5 @@ pytest -q
 
 ## ストア提出
 
-Expo/EAS での提出チェックは `app/STORE_SUBMISSION.md` を参照してください。  
+Expo/EAS での提出チェックは `app/STORE_SUBMISSION.md` を参照してください。
 設定テンプレートは `app/eas.json` と `app/store.config.example.json` です。
