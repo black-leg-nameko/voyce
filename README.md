@@ -1,8 +1,8 @@
 # Voyce - 観光地向け 音声ガイド + 翻訳
 
 1. 音声質問を録音
-2. `faster-whisper` (無料の学習済み音声認識) で文字起こし
-3. `argostranslate` (無料の翻訳モデル) で多言語化
+2. `faster-whisper` (学習済み音声認識) で文字起こし
+3. `argostranslate` (翻訳モデル) で多言語化
 4. Expoの `expo-speech` で音声返答
 
 ## ディレクトリ構成
@@ -24,7 +24,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 初回はWhisperモデルと翻訳パッケージのダウンロードが入るため、起動と初回リクエストに時間がかかります。
 本番では `ARGOS_ALLOW_RUNTIME_INSTALL=false` を維持し、必要な翻訳パッケージは `backend/preload_argos.py` で事前導入してください。
 アプリ利用前に `POST /auth/session` で運用者PINからBearerトークンを取得してください。
-本番/ステージングは単一インスタンス前提ではなく、セッション・レート制御を Redis で共有します（`REDIS_URL` 必須）。
+本番/ステージングはセッション・レート制御を Redis で共有します（`REDIS_URL` 必須）。
 
 ## 2) Expoアプリ起動
 
