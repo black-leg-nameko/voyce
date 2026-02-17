@@ -1,0 +1,74 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / Temp
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+tmp/
+temp/
+
+# Root env / local shell env
+.env
+.env.*
+!.env.example
+.envrc
+.direnv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+
+# Backend env / secrets
+backend/.env
+backend/.env.*
+!backend/.env.example
+!backend/.env.dev.example
+!backend/.env.stg.example
+!backend/.env.prod.example
+
+# Node / Expo
+app/node_modules/
+app/.expo/
+app/.expo-shared/
+app/dist/
+app/web-build/
+app/.parcel-cache/
+app/.npm/
+app/.yarn/
+app/coverage/
+app/*.tsbuildinfo
+
+# App env / secrets
+app/.env
+app/.env.*
+!app/.env.development.example
+!app/.env.production.example
+
+# Certificates / private keys
+*.pem
+*.key
+*.p12
+*.pfx
